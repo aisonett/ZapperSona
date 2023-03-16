@@ -1,0 +1,585 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+
+}
+body{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 10vh 90vh;
+    grid-template-areas: 
+    "h h"
+    "a m";
+    background-color: #F8F9FB;
+}
+
+
+main{
+    grid-area: m;
+    display: grid;
+    grid-template-rows: 0.3fr 1fr 1.7fr 1.5fr;
+    grid-template-areas: 
+    'o o o o o o o o o o o o'
+    'n n n n n n i i i e e e'
+    'p p p p p p p p a a a a'
+    't t t t t t t t a a a a';
+    gap: 18px;
+    padding: 20px;
+    width: 95%;
+    height: 53vw;
+    max-width: 1100px;
+    min-width: 750px;
+    margin: 0 auto;
+}
+aside{
+    grid-area: a;
+    max-width: 300px;
+}
+.overview {
+    grid-area: o;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: none;
+    box-shadow: none;
+}
+.networth {
+    grid-area: n;
+    display: flex;
+    max-width: 480px;
+    min-height: 180px;
+    padding: 30px;
+}
+.income {
+    grid-area: i;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 30px;
+    align-items: center;
+    position: relative;
+    min-width: 250px;
+}
+.expenses {
+    grid-area: e;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    padding: 30px;
+    align-items: center;
+    position: relative;
+    min-width: 250px;
+}
+.portfolio {
+    grid-area: p;
+    padding: 5%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    max-height: 400px;
+    max-width: 710px;
+}
+.assets {
+    grid-area: a;
+    padding: 8%;
+}
+.transactions {
+    grid-area: t;
+    padding: 5%;
+}
+
+
+
+header, aside {
+    background-color: white;
+    position: fixed;
+}
+header {
+    grid-area: h;
+    box-shadow: 0px 3px 8px rgba(130, 141, 162, 0.12);
+    z-index: 10;
+    width: 100%;
+    height: 5vw;
+}
+.container{
+    width: 95%;
+    margin: 0 auto;
+}
+header .container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+header .container > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo {
+    display: flex;
+    font-size: 16px;
+}
+.logo img {
+    margin-right: 20px;
+}
+.inputheader {
+    width: 350px;
+    height: 100%;
+    position: relative;
+    margin-right: 35%;
+}
+.inputheader input {
+    width: 85%;
+    height: 50%;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    padding: 0 20px;
+    background-color: rgba(128, 128, 128, 0.1);
+}
+.inputheader input + img {
+    height: 25%;
+    position: absolute;
+    right: 3%;
+}
+.headerright {
+    width: 200px;
+}
+.headerright select{
+    border: none;
+    outline: none;
+    margin-right: 5px;
+}
+
+aside {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    font-size: 16px;
+    position: fixed;
+    padding-top: 7%;
+}
+aside .ethereum {
+    height: 70px;
+    background-color: #784FFE;
+    color: white;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10%;
+    cursor: pointer;
+}
+aside .dashboard {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background-color: #784ffe22;
+    color: #784FFE;
+    margin: 20px 0px;
+    cursor: pointer;
+    padding-left: 20px;
+    gap: 30px;
+}
+aside a {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+
+}
+aside a img {
+    margin: 0 1.2vw;
+}
+aside a:last-of-type {
+    position: absolute;
+    bottom: 30px;
+    color: #EB3B5A;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+
+
+
+
+main > div {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 0px 10px 2px rgba(153, 166, 191, 0.12);
+}
+
+
+
+
+
+.overview h2 {
+    font-size: 1.5em;
+}
+.overview .button {
+    width: 10%;
+    height: 100%;
+    min-width: 130px;
+}
+
+
+
+
+
+.networth > div {
+    height: 100%;
+}
+.networth .left {
+    width: 55%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: space-between;
+}
+.networth .left p,.income p, .expenses p
+ {
+    font-size: 1.5vh;
+    color: #899BBE;
+    width: 100%;
+}
+.networth .left h2 {
+    width: 70%;
+    font-size: 4vh;
+}
+.networth .left h5 {
+    width: 30%;
+    font-size: 0.7em;
+    color: #20BF6B;
+    display: flex;
+    align-items: center;
+}
+.networth .left .button {
+    width: 35%;
+    height: 20%;
+    min-width: 80px;
+    min-height: 35px;
+    margin-right: 5%;
+    font-size: 0.7em;
+}
+.button {
+    background-color: #784FFE;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    border: none;
+    font-size: 0.8em;
+    cursor: pointer;
+    gap: 5px;
+}
+.networth .left .button + .button {
+    background-color: #784ffe22;
+    color: black;
+}
+.networth .right {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+}
+
+
+
+
+
+.income h2, .expenses h2{
+    width: 100%;
+    font-size: 4vh;
+    margin: 8% 0;
+}
+.income h5 {
+    width: 100%;
+    font-size: 0.7em;
+    color: #20BF6B;
+    display: flex;
+    align-items: center;
+}
+.income h5 img {
+    margin-right: 4px;
+}
+.income > img, .expenses > img {
+    height: 35%;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+}
+.expenses h5 {
+    width: 100%;
+    font-size: 0.7em;
+    color: #EB3B5A;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+
+
+
+.portfolio .title {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.portfolio .title .left {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+.portfolio .title .left img {
+    margin-right: 5%;
+    height: 30px;
+}
+.portfolio .title .button {
+    width: 20%;
+    background-color: #784ffe22;
+    color: black;
+    height: 100%;
+    min-width: 90px;
+    min-height: 30px;
+}
+.portfolio .money {
+    height: 75%;
+    width: 15%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #899BBE;
+    font-size: 0.96em;
+    margin-top: 5%;
+}
+.portfolio .statistic {
+    width: 85%;
+    height: 75%;
+    position: relative;
+    margin-top: 5%;
+}
+.portfolio .statistic .lines {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 0.5em;
+    padding-bottom: 0.4em;
+}
+.portfolio .statistic .lines .line {
+    width: 100%;
+    height: 0;
+    border-top: 1px dashed rgba(44, 56, 79, 0.3);
+}
+.portfolio .statistic .columns {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 0.4em;
+}
+.portfolio .statistic .columns .column {
+    width: 5%;
+    background-color: #784FFE;
+    height: 72%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+.portfolio .statistic .columns .column:nth-of-type(1), .portfolio .statistic .columns .column:nth-of-type(5) {
+    height: 30%;
+}
+.portfolio .statistic .columns .column:nth-of-type(2), .portfolio .statistic .columns .column:nth-of-type(6), .portfolio .statistic .columns .column:nth-of-type(10) {
+    height: 40%;
+}
+.portfolio .statistic .columns .column:nth-of-type(4) {
+    height: 60%;
+}
+.portfolio .statistic .columns .column:nth-of-type(7), .portfolio .statistic .columns .column:nth-of-type(9), .portfolio .statistic .columns .column:nth-of-type(8) {
+    height: 50%;
+}
+.portfolio .month {
+    display: flex;
+    height: 20px;
+    margin-left: 95px;
+    gap: 25px;
+}
+.portfolio .month .months{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 18px;
+    color: #899BBE;
+}
+.portfolio .month .months:nth-of-type(3){
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
+    color: #2C384F;
+}
+
+
+.assets > div {
+    display: flex;
+}
+.assets .title {
+    height: 6%;
+    font-size: 1em;
+
+}
+.assets .title img {
+    height: 30px;
+    margin-right: 5%;
+}
+.assets.title h2{
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2C384F;
+}
+.assets .coins {
+    flex-direction: column;
+    justify-content: space-between;
+    height: 80%;
+    width: 100%;
+    margin: 7% 0;
+}
+.assets .coins .coin {
+    height: 15%;
+    width: 100%;
+    padding-bottom: 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(44, 56, 79, 0.3);
+}
+.assets .coins .coin > img {
+    width: 40px;
+}
+.assets .coins .coin .title {
+    width: 60%;
+    height: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.assets .coins .coin .price {
+    width: 20%;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.assets .coins .coin .title p {
+    font-size: 0.8em;
+    color: rgba(44, 56, 79, 0.3);
+}
+.assets .coins .coin .price h6 {
+    font-size: 0.8em;
+    display: flex;
+    align-items: center;
+    color: #20BF6B;
+}
+.assets .coins .coin:nth-of-type(2) h6 {
+    color: #EB3B5A;
+}
+.assets .button {
+    min-height: 30px;
+    width: 100%;
+    height: 7%;
+}
+
+
+
+
+
+
+
+.transactions .title {
+    width: 100%;
+    height: 12%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.transactions .title .left {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    font-size: 1em;
+}
+.transactions .title .left img {
+    margin-right: 5%;
+    height: 30px;
+}
+.transactions .title .button {
+    width: 20%;
+    background-color: #784ffe22;
+    color: black;
+    height: 100%;
+    min-width: 90px;
+    min-height: 30px;
+    gap: 4px;
+}
+
+
+.translist {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 3%;
+}
+.translist .transaction {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.translist .transaction img {
+    cursor: pointer;
+}
+.transactions-list .transaction h3 {
+    font-size: 1em;
+    font-weight: 100;
+}
+.translist .transaction .button {
+    background-color: #784ffe22;
+    color: rgba(114, 75, 242, 1);
+    height: 70%;
+    border-radius: 8px;
+    padding: 0 10px;
+    font-size: 0.9em;
+    cursor: auto;
+}
+.translist .transaction h4 {
+    font-weight: 100;
+}
+.translist .transaction:nth-last-of-type(0){
+    border-bottom: 1px dashed #000;
+}
